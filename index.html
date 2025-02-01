@@ -8,45 +8,58 @@
     <body>
         <script>
             $(document).ready(function() {
-                $(".informationSection").click(function() {
-                    $(".informationEntry").slideToggle("slow");
+                $(".experienceSlide").hide();
+                $(".projectSlide").hide();
+                $(".experience").click(function() {
+                    $(".experienceSlide").slideToggle("slow");
+                });
+                $(".projects").click(function(){
+                    $(".projectSlide").slideToggle("slow");
                 });
             });
         </script>
-        <h1>Caleb Givens</h1>  
-        <div class="informationSection">
-            <h3 class="informationHeader">Amazon Experience</h3>            
-            <hr/>
-            <div class="informationEntry">
-                <h4>ICQA Process Assistant</h4>
-                <p>January 2025 - February 2025</p>
-            </div>
-            <div class="informationEntry">
-                <h4>Process Assistant</h4>
-                <p>May 2024 - December 2024</p>
-            </div>
-            <div class="informationEntry">
-                <h4>Interim Process Assistant</h4>
-                <p>January 2024 - May 2024</p>
-            </div>
-            <div class="informationEntry">
-                <h4>Reverse Logistics Associate L1</h4>
-                <p>November 2022 - January 2024</p>
+        <h1>Caleb Givens</h1>
+        <div class="experience">
+            <h3>Amazon Experience</h3>            
+            <div class="experienceSlide">
+                <hr/>
+                <div>
+                    <h4>ICQA Process Assistant</h4>
+                    <p>January 2025 - February 2025</p>
+                </div>
+                <div>
+                    <h4>Process Assistant</h4>
+                    <p>May 2024 - December 2024</p>
+                </div>
+                <div>
+                    <h4>Interim Process Assistant</h4>
+                    <p>January 2024 - May 2024</p>
+                </div>
+                <div>
+                    <h4>Reverse Logistics Associate L1</h4>
+                    <p>November 2022 - January 2024</p>
+                </div>
+                <hr/>
             </div>
         </div>
         <!--<a href="dl/COSMIC.xlsm" download>COSMIC</a>
         <a href="dl/IndirectCoverage.xlsm" downlaod>Indirect Coverage Tracker</a>
         <a href="dl/peculiar_listify.py" download>peculiar_listify</a>-->
-        <div class="informationSection">
-            <h3 class="informationHeader">Projects</h3>
-            <div class="informationEntry">
-                <h4>COSMIC</h4>
+        <div class="projects">
+            <h3>Projects</h3>
+            <div class="projectSlide">       
+                <hr/>     
+                <div>
+                    <h4>COSMIC</h4>
+                </div>
+                <div>
+                    <h4>IndirectCoverage</h4>
+                </div>
+                <div>
+                    <h4>peculiar_listify.py</h4>
+                </div>
+                <hr/>
             </div>
-            <div class="informationEntry">
-                <h4>IndirectCoverage</h4>
-            </div>
-            <div class="informationEntry">
-                <h4>peculiar_listify.py</h4>
         </div>
     </body>
 </html>
