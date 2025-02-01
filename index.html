@@ -1,23 +1,52 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Caleb Givens</title>
+        <title>Welcome</title>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+        <link rel="stylesheet" href="general.css"/>
     </head>
     <body>
-        <h1>Welcome</h1>
-
-        <h3>Projects</h3>
-        <a href="dl/COSMIC.xlsm" download>COSMIC</a>
-        <a href="dl/IndirectCoverage.xlsm" downlaod>Indirect Coverage Tracker</a>
-        <a href="dl/peculiar_listify.py" download>peculiar_listify</a>
-
-        <h3 id="myMessage">This is a messge</h3>
-        <button>Click Me!</button>
         <script>
-            $("button").click(function() {
-                $("#myMessage").toggle();
+            $(document).ready(function() {
+                $(".informationSection").click(function() {
+                    $(".informationEntry").slideToggle("slow");
+                });
             });
         </script>
+        <h1>Caleb Givens</h1>  
+        <div class="informationSection">
+            <h3 class="informationHeader">Amazon Experience</h3>            
+            <hr/>
+            <div class="informationEntry">
+                <h4>ICQA Process Assistant</h4>
+                <p>January 2025 - February 2025</p>
+            </div>
+            <div class="informationEntry">
+                <h4>Process Assistant</h4>
+                <p>May 2024 - December 2024</p>
+            </div>
+            <div class="informationEntry">
+                <h4>Interim Process Assistant</h4>
+                <p>January 2024 - May 2024</p>
+            </div>
+            <div class="informationEntry">
+                <h4>Reverse Logistics Associate L1</h4>
+                <p>November 2022 - January 2024</p>
+            </div>
+        </div>
+        <!--<a href="dl/COSMIC.xlsm" download>COSMIC</a>
+        <a href="dl/IndirectCoverage.xlsm" downlaod>Indirect Coverage Tracker</a>
+        <a href="dl/peculiar_listify.py" download>peculiar_listify</a>-->
+        <div class="informationSection">
+            <h3 class="informationHeader">Projects</h3>
+            <div class="informationEntry">
+                <h4>COSMIC</h4>
+            </div>
+            <div class="informationEntry">
+                <h4>IndirectCoverage</h4>
+            </div>
+            <div class="informationEntry">
+                <h4>peculiar_listify.py</h4>
+        </div>
     </body>
 </html>
