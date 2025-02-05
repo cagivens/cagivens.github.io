@@ -10,11 +10,15 @@
             $(document).ready(function() {
                 $(".experienceSlide").hide();
                 $(".projectSlide").hide();
+                $('.tamperMonkeySlide').hide();
                 $(".experience").click(function() {
                     $(".experienceSlide").slideToggle("slow");
                 });
                 $(".projects").click(function(){
                     $(".projectSlide").slideToggle("slow");
+                });
+                $('.tamperMonkey').click(function(){
+                    $('.tamperMonkeySlide').slideToggle('slow');
                 });
             });
         </script>
