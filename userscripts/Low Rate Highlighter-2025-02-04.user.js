@@ -35,12 +35,10 @@
         for(var i = 2; i < rows.length; i++) {
             try {
                 const fieldContainers = rows[i].getElementsByTagName('td');
-                const rateContainer = fieldContainers[11];
+                const rateContainer = fieldContainers[10];
                 const currentRate = Number(rateContainer.innerHTML);
             if(currentRate < targetRate) {
-                for(var j = 0; j < fieldContainers.length; j++) {
-                    fieldContainers[j].classList.add('lowRate');
-                }
+                rateContainer.classList.add('lowRate');
             }
             } catch(e) {
                 console.error(e.name + ' has occurred on iteration ' + (i - 1) + '\n' + e.message);
