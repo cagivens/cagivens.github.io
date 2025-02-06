@@ -4,6 +4,8 @@
 // @version      2025-02-04
 // @description  Highlights associates with low rates in PPA
 // @author       @caleigiv
+// @downloadURL  https://cagivens.github.io/userscripts/Low%20Rate%20Highlighter-2025-02-04.user.js
+// @updateURL    https://cagivens.github.io/userscripts/Low%20Rate%20Highlighter-2025-02-04.user.js
 // @match        https://fclm-portal.amazon.com/ppa/inspect/process?*
 // @icon         https://www.google.com/s2/favicons?sz=64&domain=amazon.com
 // @grant        none
@@ -47,6 +49,7 @@
         }
         // Giving each row a new class for later animation
         for(var i = 2; i < rows.length; i++) {
+            //$(rows[i]).append('<td><input type="checkbox" id="rowFilterCheckbox"/></td>');
             try {
                 const fieldContainers = rows[i].getElementsByTagName('td');
                 const rateContainer = fieldContainers[uphIndex];
