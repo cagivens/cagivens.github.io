@@ -4,6 +4,8 @@
 // @version      2025-02-22
 // @description  Searches currently viewed peculiar inventory bucket for records, then downloads them as .csv
 // @author       caleigiv
+// @downloadURL  https://cagivens.github.io/userscripts/Peculiar%Inventory%Scraper-2025-02-22.user.js
+// @updateURL    https://cagivens.github.io/userscripts/Peculiar%Inventory%Scraper-2025-02-22.user.js
 // @match        http://peculiar-inventory-na.aka.corp.amazon.com/MDT1/report/*
 // @icon         https://www.google.com/s2/favicons?sz=64&domain=amazon.com
 // @require      https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js
