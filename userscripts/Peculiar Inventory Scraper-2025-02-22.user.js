@@ -15,19 +15,29 @@
 (function() {
     'use strict';
     $(document).ready(function(){
-        $('.a-input-text-wrapper.a-form-selected.a-width-extra-large').append('<button class="listifyButton">Press Me!</button>');
+        function createButton() {
+            const buttonContainer = document.createElement('span');
+            const button = document.createElement('button');
+            buttonContainer.classList.add('a-button-inner');
+            buttonContainer.appendChild(button);
+            button.classList.add('listifyButton');
+            button.innerHTML = 'Export to CSV';
+            return buttonContainer;
+        }
+        $('div.a-column.a-span12')[1].append(createButton());
         $('.listifyButton').click(function(){
             function saveCSV(data) {
-                const url = window.URL;
-                var filename = 'peculiar_inventory_data.csv';
+                var bucket = window.location.href.split('/');
+                bucket = bucket[bucket.length - 1];
+                bucket = bucket.substring(0, bucket.indexOf('?'))
+                var date = new Date();
+                var filename = `peculiar_inventory_data_${bucket}_${date.getYear()}${date.getMonth()}${date.getDay()}.csv`;
                 var file = new Blob([data], {type: 'text/plain'});
                 var downloadElement = document.createElement('a');
                 downloadElement.setAttribute('href', window.URL.createObjectURL(file));
                 downloadElement.setAttribute('download', filename);
                 document.body.appendChild(downloadElement);
                 downloadElement.click();
-                document.removeChild(downloadElement);
-                debugger;
             }
             function sweepContainer(containerArray) {
                 var resultString = '';
@@ -58,12 +68,10 @@
                         resultString += data[4].innerHTML + ',\n';
                         scrapedRecords += 1;
                         if(j == items.length - 1) {
-                            debugger;
                             if(scrapedRecords < totalRecords - 1) {
                                 nextButton.click();
                                 j = 0;
                                 items = document.getElementById('side-panel').getElementsByTagName('tbody')[0].getElementsByTagName('tr');
-                                debugger;
                             }
                         }
                     }
